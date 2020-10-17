@@ -1,8 +1,26 @@
-const defaultResult = 0;
-let currentResult = defaultResult;
+currentCalculationOutput.textContent = "Выполните выражение"
 
-currentResult = (currentResult + 10) * 3 / 2 - 1;
+subtractBtn.onclick = function subtractOperator () {
+    let result = currentResultOutput.textContent - +userInput.value;
+    currentCalculationOutput.textContent = "вычитание";
+    return currentResultOutput.textContent = result;
+}
 
-let calculationDescription = `(${defaultResult} + 10) * 3 / 2 - 1`;
+addBtn.onclick = function addOperator () {
+    let result = +currentResultOutput.textContent + +userInput.value;
+    currentCalculationOutput.textContent = "сложение ";
+    return currentResultOutput.textContent = result;
+}
 
-outputResult(currentResult, calculationDescription);
+
+divideBtn.onclick = function divideOperator () {
+    let result = +currentResultOutput.textContent / +userInput.value;
+    currentCalculationOutput.textContent = "деление";
+    return currentResultOutput.textContent = result;
+}
+
+multiplyBtn.onclick = function multiplyOperator () {
+    let result = +currentResultOutput.textContent * +userInput.value;
+    currentCalculationOutput.textContent = "умножение";
+    return currentResultOutput.textContent = result;
+}
